@@ -26,7 +26,26 @@ class SecureCV {
         this.setupServiceWorker();
         this.setupPerformanceOptimizations();
         this.setupLinkFocusHandler();
+        this.insertProtectedContact();
         console.log('✅ Setup completo!');
+    }
+
+    insertProtectedContact() {
+        // Ofuscação simples: divide e-mail e telefone em partes
+        const emailUser = 'luca.fo';
+        const emailDomain = 'hotmail.com';
+        const telefone = '+55 19 99285-3094';
+        const email = `${emailUser}@${emailDomain}`;
+        const emailSpan = document.getElementById('email');
+        const telSpan = document.getElementById('telefone');
+        if (emailSpan) {
+            emailSpan.textContent = email;
+            emailSpan.setAttribute('aria-label', email);
+        }
+        if (telSpan) {
+            telSpan.textContent = telefone;
+            telSpan.setAttribute('aria-label', telefone);
+        }
     }
 
     setupSecurity() {
