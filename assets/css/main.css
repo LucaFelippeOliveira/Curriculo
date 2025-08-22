@@ -1,4 +1,5 @@
-/* Cybersecurity Resume - Optimized & Secure */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 
 *,*::before,*::after{
   margin:0;
@@ -44,6 +45,7 @@
     animation-duration:.01ms!important;
     transition-duration:.01ms!important;
     animation-play-state:paused!important;
+  /* Cybersecurity Resume - Optimized & Secure */
   }
 }
 
