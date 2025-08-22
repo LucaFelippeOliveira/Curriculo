@@ -127,32 +127,35 @@ body::before{
 }
 
 .profile-image::before{
-  content:'';
-  position:absolute;
-  inset:-5px;
-  background:linear-gradient(45deg, var(--accent), var(--accent-dark), var(--success), var(--accent));
-  border-radius:50%;
-  opacity:0;
-  transition:var(--transition);
-  /* animation removida para não girar o contorno */
-  z-index:-1;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent) 60%, transparent 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
 }
 
 .profile-image:hover::before{
-  opacity:0.7;
+  opacity: 0.7;
 }
 
 
 
 .profile-image img{
-  width:150px;
-  height:150px;
+  width: 150px;
+  height: 150px;
   border-radius:50%;
-  border:3px solid var(--accent);
-  box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 4px rgba(0,212,255,.1);
-  transition:var(--transition);
-  object-fit:cover;
-  will-change:transform;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(0,0,0,.3), 0 0 0 4px rgba(0,212,255,.1);
+  transition: var(--transition);
+  object-fit: cover;
+  will-change: transform;
   transform:translateZ(0);
 }
 
