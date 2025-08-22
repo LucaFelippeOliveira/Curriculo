@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 
 
 *,*::before,*::after{
@@ -40,14 +40,7 @@
   --font-size-3xl:2.5rem;
 }
 
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms!important;
-    transition-duration:.01ms!important;
-    animation-play-state:paused!important;
-  /* Cybersecurity Resume - Optimized & Secure */
-  }
-}
+
 
 html{
   scroll-behavior:smooth;
@@ -184,6 +177,7 @@ body::before{
   will-change:transform;
   font-family:'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 .role-highlight{
