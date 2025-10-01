@@ -32,12 +32,18 @@ class SecureCV {
 
     insertProtectedContact() {
         // Ofuscação simples: divide e-mail e telefone em partes
-        const emailUser = 'luca.fo';
-        const emailDomain = 'hotmail.com';
+        const emailUser = 'luca1015f.fo';
+        const emailDomain = 'gmail.com';
         const telefone = '+55 19 99285-3094';
+        const dataNascimento = '30/07/2004';
+        const cidade = 'Piracicaba, SP';
         const email = `${emailUser}@${emailDomain}`;
+        
         const emailSpan = document.getElementById('email');
         const telSpan = document.getElementById('telefone');
+        const dataSpan = document.getElementById('data-nascimento');
+        const cidadeSpan = document.getElementById('cidade');
+
         if (emailSpan) {
             emailSpan.textContent = email;
             emailSpan.setAttribute('aria-label', email);
@@ -45,6 +51,14 @@ class SecureCV {
         if (telSpan) {
             telSpan.textContent = telefone;
             telSpan.setAttribute('aria-label', telefone);
+        }
+        if (dataSpan) {
+            dataSpan.textContent = dataNascimento;
+            dataSpan.setAttribute('aria-label', dataNascimento);
+        }
+        if (cidadeSpan) {
+            cidadeSpan.textContent = cidade;
+            cidadeSpan.setAttribute('aria-label', cidade);
         }
     }
 
