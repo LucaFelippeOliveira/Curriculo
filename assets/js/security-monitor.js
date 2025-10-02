@@ -44,9 +44,9 @@ class SecurityMonitor {
 
         observer.observe(document.body, {
             childList: true,
-            subtree: true,
-            attributes: true,
-            attributeFilter: ['src', 'href', 'onclick', 'onload']
+            subtree: false, // Reduzido para apenas filhos diretos
+            attributes: false, // Desabilitado para melhor performance
+            attributeFilter: ['src', 'href'] // Reduzido filtros
         });
     }
 
@@ -89,25 +89,27 @@ class SecurityMonitor {
     }
 
     startThreatDetection() {
-        // Detect rapid requests (potential DoS)
+        // Detect rapid requests (potential DoS) - otimizado
         let requestCount = 0;
         setInterval(() => {
             if (requestCount > 50) {
                 this.reportThreat('Potential DoS attack detected', 'critical');
             }
             requestCount = 0;
-        }, 1000);
+        }, 3000); // Reduzido de 1s para 3s
 
-        // Monitor for script injection
+        // Monitor for script injection - otimizado
         setInterval(() => {
-            const scripts = document.querySelectorAll('script');
-            scripts.forEach(script => {
-                if (!script.src && script.textContent.includes('eval(')) {
-                    this.reportThreat('Script injection detected', 'critical');
-                    script.remove();
-                }
-            });
-        }, 2000);
+            const scripts = document.querySelectorAll('script:not([src])');
+            if (scripts.length > 0) {
+                scripts.forEach(script => {
+                    if (script.textContent.includes('eval(')) {
+                        this.reportThreat('Script injection detected', 'critical');
+                        script.remove();
+                    }
+                });
+            }
+        }, 5000); // Reduzido de 2s para 5s
     }
 
     reportThreat(description, severity) {

@@ -5,8 +5,8 @@ class SecureCV {
     constructor() {
         this.isSecurityActive = true;
         this.observerOptions = {
-            threshold: 0.1,
-            rootMargin: '50px'
+            threshold: 0.05,
+            rootMargin: '100px'
         };
         this.init();
     }
@@ -82,7 +82,7 @@ class SecureCV {
                         // Remove will-change after animation completes
                         setTimeout(() => {
                             element.style.willChange = 'auto';
-                        }, 600);
+                        }, 400);
                     });
                     
                     observer.unobserve(element);
@@ -144,17 +144,66 @@ class SecureCV {
             document.head.appendChild(link);
         });
 
-        // Otimizar scroll performance
+        // Sistema de scroll unificado - estilo Apple
         let ticking = false;
+        let lastScrollY = 0;
+        let scrollTimeout = null;
+        let isScrolling = false;
+        let scrollType = 'unknown';
+        
         const updateScrollPosition = () => {
-            // Código de scroll otimizado aqui
+            const currentScrollY = window.scrollY;
+            const scrollDelta = Math.abs(currentScrollY - lastScrollY);
+            
+            // Detectar scroll ativo
+            if (scrollDelta > 0.1) {
+                if (!isScrolling) {
+                    document.body.classList.add('scrolling');
+                    isScrolling = true;
+                }
+                
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    document.body.classList.remove('scrolling');
+                    isScrolling = false;
+                }, 80);
+            }
+            
+            // Atualizar posição
+            lastScrollY = currentScrollY;
             ticking = false;
         };
 
-        document.addEventListener('scroll', () => {
+        // Listener unificado para todos os tipos de scroll - estilo Apple
+        const handleScroll = () => {
             if (!ticking) {
                 requestAnimationFrame(updateScrollPosition);
                 ticking = true;
+            }
+        };
+
+        // Detectar tipo de input e aplicar otimizações específicas
+        const detectScrollType = (e) => {
+            if (e.type === 'wheel') {
+                scrollType = 'wheel';
+            } else if (e.type === 'touchmove') {
+                scrollType = 'touch';
+            } else if (e.type === 'keydown') {
+                scrollType = 'keyboard';
+            } else {
+                scrollType = 'scroll';
+            }
+            
+            handleScroll();
+        };
+
+        // Event listeners otimizados - estilo Apple
+        document.addEventListener('scroll', handleScroll, { passive: true });
+        document.addEventListener('wheel', detectScrollType, { passive: true });
+        document.addEventListener('touchmove', detectScrollType, { passive: true });
+        document.addEventListener('keydown', (e) => {
+            if ([32, 33, 34, 35, 36, 37, 38, 39, 40].includes(e.keyCode)) {
+                detectScrollType(e);
             }
         }, { passive: true });
     }
