@@ -1,12 +1,8 @@
 
 
 
-*,*::before,*::after{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  /* outline:none; removido para acessibilidade */
-}
+/* Reset básico e box model global */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root{
   --primary:#0a0e27;

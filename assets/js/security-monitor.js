@@ -50,7 +50,7 @@ class SecurityMonitor {
         });
     }
 
-    // monitorConsoleAccess removido
+
 
     checkSuspiciousElement(element) {
         const suspicious = [
@@ -141,7 +141,7 @@ class SecurityMonitor {
         return 'unknown';
     }
 
-    // lockdown removido
+
 
     getThreatReport() {
         return {

@@ -63,7 +63,7 @@ class SecureCV {
     }
 
     setupSecurity() {
-    // Bloqueios e monitoramento removidos para permitir total interação e inspeção
+    
     }
 
     setupAnimations() {
@@ -114,11 +114,6 @@ class SecureCV {
         }
     }
 
-    // Função de proteção de DevTools removida
-
-    // Função de proteção de console removida
-
-    // triggerSecurityAlert removido
 
     setupPerformanceOptimizations() {
         // Lazy load de imagens não críticas
