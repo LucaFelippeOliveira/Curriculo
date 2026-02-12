@@ -1,4 +1,4 @@
-// ===== SECURITY MONITORING SYSTEM =====
+// MONITORAMENETO DE SEGURANÇA
 class SecurityMonitor {
     constructor() {
         this.threats = [];

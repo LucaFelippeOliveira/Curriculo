@@ -1,7 +1,5 @@
-/* ==========================================================================
-   PAINEL DE DADOS DO CURRÍCULO (SEU "CMS")
-   Edite as informações abaixo para atualizar o site automaticamente.
-   ========================================================================== */
+/* PAINEL DE DADOS DO CURRÍCULO (SEU "CMS")
+   Edite as informações abaixo para atualizar o site automaticamente */
 
 // --- 1. FORMAÇÃO ACADÊMICA ---
 const dadosFormacao = [
@@ -46,18 +44,6 @@ const dadosFormacao = [
 
 // --- 2. EXPERIÊNCIA PROFISSIONAL ---
 const dadosExperiencia = [
-    {
-        periodo: "Maio 2024 - Julho 2024 (3 meses)",
-        titulo: "SÓCIO PROPRIETÁRIO",
-        instituicao: "Capivaras Shop",
-        descricao: [
-            "Cofundação e gestão da Capivaras Shop, loja online especializada",
-            "Desenvolvimento do site e estratégias de marketing digital",
-            "Gestão de campanhas no Facebook Ads e captação de clientes",
-            "Análise de métricas e precificação estratégica de produtos",
-            "Gestão de fornecedores e transferências bancárias internacionais"
-        ]
-    },
     {
         periodo: "Janeiro 2024 - Abril 2024 (4 meses)",
         titulo: "OPERADOR DE MÁQUINAS",
@@ -174,9 +160,8 @@ const dadosVoluntario = [
     }
 ];
 
-/* ==========================================================================
-   FUNÇÕES DE SEGURANÇA
-   ========================================================================== */
+// FUNÇÕES DE SEGURANÇA
+
 
 // Sanitização de HTML (proteção contra XSS)
 function escapeHtml(text) {
@@ -207,11 +192,6 @@ const iconesPermitidos = [
 function isValidIcon(icon) {
     return iconesPermitidos.includes(icon);
 }
-
-/* ==========================================================================
-   MOTOR DE RENDERIZAÇÃO (ENGINE)
-   A partir daqui é o código que faz a mágica. Só mexa se souber o que faz.
-   ========================================================================== */
 
 // Função Genérica para Timeline (Experiência, Formação, Voluntário)
 function renderTimeline(dados, containerId) {

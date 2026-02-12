@@ -1,34 +1,30 @@
-/* ==========================================================================
-   1. PAINEL DE CONTROLE (ROOT)
-   ========================================================================== */
+/* PAINEL DE CONTROLE*/
    :root {
-    /* --- CORES (Tema Cyber Security) --- */
-    --cor-fundo-site: #0a0e27;                /* Azul profundo (quase preto) */
-    --cor-fundo-card: rgba(26, 31, 58, 0.95); /* Fundo das seções */
-    --cor-borda-card: rgba(0, 212, 255, 0.3);  /* Borda azul neon suave */
-    --cor-destaque: #00d4ff;                   /* Azul Ciano (Títulos e Ícones) */
-    --cor-texto-principal: #ffffff;            /* Branco puro */
-    --cor-texto-secundario: #b0c4de;           /* Cinza azulado claro */
+    /* --- Cores Principais --- */
+    --cor-fundo-site: #ffffff;                /* Fundo do site */
+    --cor-fundo-card: rgba(255, 255, 255, 0.95); /* Fundo das seções */
+    --cor-borda-card: rgba(0, 212, 255, 0.3);  /* Borda neon suave */
+    --cor-destaque: #00849f;                   /* Títulos e Ícones */
+    --cor-texto-principal: #2f2f2f;            /* Cor do texto principal */
+    --cor-texto-secundario: #2f2f2f;           /* Cor do texto secundário */
     
     /* Cores de Status */
-    --cor-sucesso: #00ff88;         /* Verde (Certificados Concluídos) */
-    --cor-andamento: #ffe066;       /* Amarelo (Cursos em Andamento) */
+    --cor-sucesso: #009650;         /* Certificados Concluídos */
+    --cor-andamento: #c8b04e;       /* Cursos em Andamento */
   
-    /* --- DIMENSÕES E ESPAÇAMENTOS --- */
-    --largura-maxima: 1200px;
-    --espaco-entre-secoes: 0.9375rem;  /* Distância vertical entre blocos (15px) */
-    --padding-interno: 1.5625rem;      /* Espaço interno das caixas (25px) */
-    --borda-arredondada: 20px;        /* Curvatura dos cantos */
+    /* DIMENSÕES E ESPAÇAMENTOS */
+    --largura-maxima: 1200px;            /* Largura máxima do site */
+    --espaco-entre-secoes: 10px;  /* Distância vertical entre seções (15px) */
+    --padding-interno: 15px;      /* Espaço interno das caixas (25px) */
+    --borda-arredondada: 20px;        /* Curvatura dos cantos (20px) */
   }
   
-  /* ==========================================================================
-     2. RESET E BASE
-     ========================================================================== */
+  /* RESET E BASE */
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, var(--cor-fundo-site) 0%, #1a1f3a 100%);
+    background: linear-gradient(135deg, var(--cor-fundo-site) 0%, #ffffff 100%);
     color: var(--cor-texto-principal);
     line-height: 1.7;
     overflow-x: hidden; /* Evita rolagem lateral indesejada */
@@ -47,40 +43,27 @@
     text-decoration-color: currentColor;
   }
 
-  /* Fundo Animado */
-  body::before {
-    content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 20% 80%, rgba(0,212,255,.04) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0,153,204,.04) 0%, transparent 50%);
-    z-index: -1;
-    animation: pulse 15s ease-in-out infinite alternate;
-  }
-  @keyframes pulse { 0% { opacity: .15; } 100% { opacity: .25; } }
-  
   .container {
     max-width: var(--largura-maxima);
     margin: 0 auto;
     padding: 2rem;
   }
   
-  /* ==========================================================================
-     3. ESTRUTURA DOS CARDS (Header e Seções)
-     ========================================================================== */
+  /* ESTRUTURA DOS CARDS (Header e Seções) */
   .header, .section {
     background: var(--cor-fundo-card);
     backdrop-filter: blur(6px);
-    border: 1px solid var(--cor-borda-card);
+    border: 2px solid var(--cor-borda-card);
     border-radius: var(--borda-arredondada);
     padding: var(--padding-interno);
     margin-bottom: var(--espaco-entre-secoes);
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
     transition: transform 0.2s ease;
   }
   
   /* Efeito hover suave nas seções */
   .section:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 255, 255,);
   }
   
   .section-title {
@@ -98,9 +81,7 @@
     background: linear-gradient(90deg, var(--cor-destaque), transparent);
   }
   
-  /* ==========================================================================
-     4. CABEÇALHO (Perfil)
-     ========================================================================== */
+  /* CABEÇALHO (Informações Pessoais) */
   .header-content {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -154,7 +135,7 @@
   }
   .contact-item a:hover { color: var(--cor-destaque); }
   
-  /* Texto "Sobre Mim" */
+  /* Sobre Mim */ 
   .objective {
     background: linear-gradient(135deg, rgba(0,212,255,.12), rgba(0,153,204,.06));
     border-left: 4px solid var(--cor-destaque);
@@ -163,10 +144,8 @@
     color: var(--cor-texto-secundario);
   }
   
-  /* ==========================================================================
-     5. TIMELINE (Experiência, Formação, Trabalho Voluntario)
-     ========================================================================== */
-  .timeline-item {
+  /* TIMELINE (Experiência, Formação, Trabalho Voluntario) */
+  .timeline-item {  
     position: relative;
     padding-left: 2rem;
     margin-bottom: 2.5rem;
@@ -195,9 +174,7 @@
   .timeline-description ul { list-style: disc; margin-left: 1.2rem; margin-top: 0.5rem; }
   .timeline-description li { color: var(--cor-texto-secundario); margin-bottom: 0.3rem; }
   
-  /* ==========================================================================
-     6. GRIDS (Competências e Idiomas)
-     ========================================================================== */
+  /* GRIDS (Competências e Idiomas) */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -231,9 +208,7 @@
     border-bottom: none;
   }
   
-  /* ==========================================================================
-     7. CERTIFICADOS (Certificados e Cursando no Momento)
-     ========================================================================== */
+  /* CERTIFICADOS (Certificados Concluídos e Cursos em Andamento) */
   .certification-item {
     background: linear-gradient(135deg, rgba(0,255,136,.05), transparent);
     border: 1px solid rgba(0,255,136,.3);
@@ -247,7 +222,7 @@
     background: var(--cor-sucesso);
   }
   
-  /* Variação Amarela (Em Andamento) */
+  /* Em Andamento) */
   .certification-item-inprogress {
     background: linear-gradient(135deg, rgba(255, 224, 102, 0.05), transparent);
     border-color: var(--cor-andamento);
@@ -259,9 +234,7 @@
   .certification-issuer { color: var(--cor-texto-principal); font-size: 0.95rem; }
   .certification-date { font-size: 0.85rem; color: var(--cor-texto-secundario); margin-top: 0.3rem; }
   
-  /* ==========================================================================
-     8. RESPONSIVIDADE E ANIMAÇÃO
-     ========================================================================== */
+  /* RESPONSIVIDADE E ANIMAÇÃO */
   @media (max-width: 768px) {
     .header-content { grid-template-columns: 1fr; text-align: center; }
     .profile-image { margin: 0 auto; }
