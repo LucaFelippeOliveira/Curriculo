@@ -1,0 +1,119 @@
+{
+    "perfil": {
+    "nome": "LUCA FELIPPE DE OLIVEIRA",
+    "idade": "21 ANOS",
+    "localizacao": "Piracicaba, SP",
+    "telefone_wpp": "5519992853094",
+    "email": "lucafelippesuporte@gmail.com",
+    "linkedin": "https://linkedin.com/in/luca-felippe",
+    "github": "https://github.com/LucaFelippeOliveira",
+    "tryhackme": "https://tryhackme.com/p/luca1015f.fo"
+   
+    
+  },
+    "resumo": "Desde cedo fui movido pela curiosidade, do primeiro contato com uma placa-mãe aos 10 anos até o primeiro servidor feito em casa, essa é minha maior habilidade, e é o que me traz aqui, em busca de aprender mais, gerando conexões e assumindo responsabilidades que impulsionem minha evolução profissional na área da tecnologia.",
+    "experiencia_profissional": [
+      {
+        "cargo": "Operador de Máquinas",
+        "empresa": "ElringKlinger",
+        "periodo": "Janeiro 2024 - Abril 2024",
+        "descricao": "Operação e ajuste de máquinas industriais com foco em precisão e controle de qualidade."
+      },
+      {
+        "cargo": "Estagiário de TI",
+        "empresa": "Encoparts",
+        "periodo": "Outubro 2021 – Maio 2022",
+        "descricao": "Suporte técnico a usuários da rede corporativa e manutenção de hardware. Instalação de equipamentos, reparo de estações de trabalho, gestão de backups e controle de inventário."
+      },
+      {
+        "cargo": "Assistente",
+        "empresa": "B G Comércio",
+        "periodo": "Dezembro 2020 - Agosto 2021",
+        "descricao": "Suporte técnico em TI e manutenção de sistemas, além de auxílio em processos financeiros."
+      },
+      {
+        "cargo": "Trainee",
+        "empresa": "UCAF",
+        "periodo": "Dezembro 2019 - Setembro 2020",
+        "descricao": "Auxílio na logística, organização de estoque e suporte operacional."
+      }
+    ],
+    "formacao_academica": [
+      {
+        "curso": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+        "instituicao": "Universidade Presbiteriana Mackenzie",
+        "periodo": "Previsão: Dezembro 2027"
+      },
+      {
+        "curso": "Engenharia de Produção",
+        "instituicao": "PUC Poços de Caldas",
+        "periodo": "2022 (Mudança de carreira para Tecnologia)"
+      }
+    ],
+    "habilidades_e_conhecimento": [
+      {
+        "categoria": "Desenvolvimento e Web",
+        "itens": ["HTML5", "CSS3", "JavaScript", "Python", "GitHub", "Git"]
+      },
+      {
+        "categoria": "Sistemas Operacionais e Infraestrutura",
+        "itens": ["Windows", "Linux (Ubuntu Server, Kali, Tails)"]
+      },
+      {
+        "categoria": "Fundamentos de Computação",
+        "itens": ["Arquitetura de Computadores", "Organização de Sistemas", "Lógica Digital"]
+      },
+      {
+        "categoria": "Ferramentas e Técnicas",
+        "itens": ["Word", "Excel", "Automação", "Inteligência Artificial"]
+      }
+    ],
+    "projetos_pessoais": [
+      {
+        "nome": "Servidor Doméstico / Ubuntu Server",
+        "descricao": "Implementação e configuração de servidor Linux para gerenciamento centralizado de arquivos (RAID) e hospedagem de servidores de jogos, lidando com configuração de portas e estabilidade de rede."
+      },
+      {
+        "nome": "E-commerce / Gestão e Automação",
+        "descricao": "Manutenção técnica de site de vendas, desenvolvimento de layout (Front-end) e automação de processos internos e atendimento ao cliente."
+      }
+    ],
+    "certificados": [
+      {
+        "emissor": "IBM",
+        "nome": "Excel Basics for Data Analysis",
+        "data": "Agosto de 2025",
+        "codigo": "RKGAZZH5XDPE",
+        "link_validacao": "",
+        "resumo": "",
+        "imagem_url": ""
+      },
+      {
+        "emissor": "CISCO",
+        "nome": "Introduction to Cybersecurity",
+        "data": "Maio de 2025",
+        "codigo": "4f755903-1c25-4cbb-bad0-e69618c64e69",
+        "link_validacao": "",
+        "resumo": "",
+        "imagem_url": ""
+      },
+      {
+        "emissor": "GOOGLE",
+        "nome": "Play It Safe: Manage Security Risks",
+        "data": "Março de 2025",
+        "codigo": "7MJKGWHMAV3T",
+        "link_validacao": "",
+        "resumo": "",
+        "imagem_url": ""
+      },
+      {
+        "emissor": "GOOGLE",
+        "nome": "Foundations of Cybersecurity",
+        "data": "Dezembro de 2024",
+        "codigo": "ODTLG1R8YUBY",
+        "link_validacao": "",
+        "resumo": "",
+        "imagem_url": ""
+      }
+    ]
+  }

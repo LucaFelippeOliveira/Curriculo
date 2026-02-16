@@ -1,0 +1,155 @@
+/* 1. VARIÁVEIS E RESET */
+:root {
+    --azul-marinho: #1e293b;
+    --fundo-claro: #f8fafc;
+    --texto-escuro: #121924;
+    --texto-suave: #94a3b8;
+    --branco: #ffffff;
+    --azul-link: #60a5fa;
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fundo-claro);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* 2. LAYOUT PRINCIPAL */
+.container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 20px; 
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* 3. ITENS SIDE BAR */
+
+/* Container segura todas as linhas para Largura total */
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*Alinhamento Horizontal */
+.grupo-linha {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos textos */
+.grupo-linha span {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    text-align: center;
+    font-weight: 500;
+}
+
+.grupo-linha a {
+    color: var(--azul-link);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.2s;
+}
+
+.grupo-linha a:hover {
+    text-decoration: underline;
+}
+
+/* Divisória */
+.divisor-sidebar {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(148, 163, 184, 0.2);
+}
+
+/* 4. COMPONENTES DA SIDEBAR */
+.foto-container { text-align: center; }
+
+.foto-container img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--azul-link);
+}
+
+.categoria-titulo {
+    display: block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--azul-link);
+    margin-bottom: 5px;
+}
+
+.habilidades-texto {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+#habilidades-secao h3 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--texto-suave);
+}
+
+/* 5. CONTEÚDO PRINCIPAL */
+.conteudo-principal { 
+    padding: 40px 80px; 
+    max-width: 1100px; 
+}
+
+.secao h2 {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #0f172a;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#resumo-profissional p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-style: italic;
+    color: var(--texto-escuro);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; }
+    .sidebar { position: relative; height: auto; padding: 40px 20px;}
+    .conteudo-principal { padding: 40px 20px; }
+}
